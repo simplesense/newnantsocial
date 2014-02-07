@@ -2,7 +2,10 @@
     <div class="span6 offset3">
         <div class="well">
             <p>
-              <%= @pin.description %>
+              <h4><%= @pin.description %></h4>
+            </p>
+            <p>
+            	<small><%= time_ago_in_words(@pin.created_at) %></small>
             </p>
             <%= link_to 'Edit', edit_pin_path(@pin) %> |
             <%= link_to 'Back', pins_path %>
